@@ -23,7 +23,7 @@ const App = () => {
   const CodeReview = async () => {
     setLoading(true);
     try {
-      const response = await axios.post( "http://localhost:3000/ai/review", // Use environment variable
+      const response = await axios.post( "https://code-review-o1q5.onrender.com/ai/review", // Use environment variable
         { code }
       );
       setReview(response.data);
