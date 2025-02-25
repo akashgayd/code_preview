@@ -8,6 +8,7 @@ import axios from 'axios';
 import Markdown from 'react-markdown'
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
+import AddAdsense from "./AddAdsense";
 
 
 const App = () => {
@@ -17,27 +18,35 @@ const App = () => {
     }
   `);
   const [review, setReview] = useState(``);
-  const [loading, setLoading] = useState(false); // Renamed 'loder' to 'loading' for clarity
+  const [loading, setLoading] = useState(false);
 
-  // Removed unnecessary useEffect
 
   const CodeReview = async () => {
     setLoading(true);
     try {
-      const response = await axios.post( "https://code-review-o1q5.onrender.com/ai/review", // Use environment variable
+      const response = await axios.post( "https://code-review-o1q5.onrender.com/ai/review", 
         { code }
       );
       setReview(response.data);
     } catch (error) {
       console.error("Error fetching review:", error);
-      setReview("Error fetching review. Please check the console."); // Display an error message to the user
+      setReview("Error fetching review. Please check the console."); 
     } finally {
-      setLoading(false); // Ensure loading is always set to false
+      setLoading(false); 
     }
   };
 
   return (
+
     <main style={{ display: "flex", gap: "20px", padding: "20px" }}>
+      <AddAdsense.Google
+      
+      data-ad-client="ca-pub-3451748995611548"
+      data-ad-slot="1234567890"
+      style={{ display: "block" }}
+      format="auto"
+      responsive="true"
+      />
       <div className="left">
         <div className="code">
           <Editor
