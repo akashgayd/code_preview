@@ -39,12 +39,8 @@ const App = () => {
         }
     };
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // for smooth scrolling
-        });
-    };
+    
+  
 
     return (
         <main style={{ display: "flex", gap: "20px", padding: "20px" }}>
