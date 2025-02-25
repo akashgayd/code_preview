@@ -52,6 +52,15 @@ const App = () => {
               format="auto"
               responsive="true"
               />
+
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-3451748995611548"
+     data-ad-slot="6045711786"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>
             <div className="left">
                 <div className="code">
                     <Editor
