@@ -40,7 +40,7 @@ const App = () => {
 
     <main style={{ display: "flex", gap: "20px", padding: "20px" }}>
       <AddAdsense.Google
-      
+     
       data-ad-client="ca-pub-3451748995611548"
       data-ad-slot="1234567890"
       style={{ display: "block" }}
