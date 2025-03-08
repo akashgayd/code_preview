@@ -1,111 +1,105 @@
+/* General Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Root Styles */
 body, html, #root {
-  height: 100%;
-  width: 100%;
-  background-color: #c1c0c0;
-  font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: #c1c0c0;
+    font-family: Arial, sans-serif;
 }
 
+/* Main Layout */
 main {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2rem;
-  gap: 1rem;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 1rem;
 }
 
 /* Left and Right Sections */
 main .left,
 main .right {
-  flex: 1;
-  min-height: 100vh;
-  border-radius: 10px;
-  overflow: hidden;
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-/* Left Section */
+/* Left Section Styles */
 main .left {
-  background-color: #000000;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
+    background-color: #000000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
 }
 
 /* Code Editor */
 .code {
-  flex: 1;
-  width: 100%;
-  padding: 4px;
+    flex: 1;
+    width: 100%;
+    padding: 4px;
 }
 
 /* Review Button */
 main .left .review {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  background-color: #cce2ffc3;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  user-select: none;
-  cursor: pointer;
-  border: none;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #cce2ffc3;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    user-select: none;
+    cursor: pointer;
+    border: none;
 }
 
 /* Right Section */
 main .right {
-  background-color: #322727;
-  color: white;
-  padding: 20px 24px;
-  display: flex;
-  flex-direction: column;
+    background-color: #322727;
+    color: white;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
-  main {
-    flex-direction: column;
-    padding: 1rem;
-  }
+    main {
+        flex-direction: column;
+        padding: 1rem;
+    }
 
-  main .left, 
-  main .right {
-    width: 100%;
-    min-height: 50vh;
-  }
+    main .left, 
+    main .right {
+        width: 100%;
+        min-height: 50vh; /* Corrected typo here */
+    }
 }
 
 /* Mobile Devices */
-@media screen and (min-width: 322px) and (max-width:1000px) {
-  main {
-    flex-direction: column;
-    width: 100%;
-    padding: 1rem;
-  }
-  
-element.style {
-  width: 100%;
-}
+@media screen and (min-width: 322px) and (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+    }
 
-  main .left{
-    width: 100%;
-    min-height: auto;
-    overflow: auto;
-  }
-  main .right {
-    width: 100%;
-    min-height: auto;
-    overflow: auto;
-  }
+    main .left,
+    main .right {
+        width: 100%;
+        min-height: auto;
+        overflow: auto;
+    }
 
-  main .left .review {
-    bottom: 0.5rem;
-    right: 0.5rem;
-  }
+    main .left .review {
+        bottom: 0.5rem;
+        right: 0.5rem;
+    }
 }
