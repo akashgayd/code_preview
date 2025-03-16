@@ -70,7 +70,7 @@ const CodePreview = () => {
 
             <div className="right">
                 {loading ? (
-                    <div><img style={{width:"100px"}} src="https://loading.io/assets/mod/spinner/pinkpig/lg.gif" alt="" /></div>
+                    <div><img style={{width:"60px"}} src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/585d0331234507.564a1d239ac5e.gif" alt="" /></div>
                 ) : (
                     <Markdown rehypePlugins={[rehypeHighlight]}>
                         {review}
