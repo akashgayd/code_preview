@@ -68,6 +68,10 @@ main .right {
     display: flex;
     flex-direction: column;
 }
+.copy-button{
+    width: 30px;
+    height: 30px;
+}
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {

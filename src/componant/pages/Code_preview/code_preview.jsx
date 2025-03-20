@@ -12,9 +12,8 @@ import { useEffect } from "react";
 
 const CodePreview = () => {
     const [code, setCode] = useState(`
-        function sum() {
-          return 1 + 1;
-        }
+       paste your code here...... 
+        
       `);
     const [review, setReview] = useState(``);
     const [loading, setLoading] = useState(false);
