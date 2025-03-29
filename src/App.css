@@ -3,52 +3,63 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Root Styles */
-body, html, #root {
+  }
+  
+  /* Root Styles */
+  body,
+  html,
+  #root {
     height: 100%;
     width: 100%;
     background-color: #c1c0c0;
     font-family: Arial, sans-serif;
-}
-
-/* Main Layout */
-main {
+  }
+  
+  /* Main Layout */
+  main {
     min-height: 100vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 2rem;
     gap: 1rem;
-}
-
-/* Left and Right Sections */
-main .left,
-main .right {
+  }
+  
+  /* Left and Right Sections */
+  main .left,
+  main .right {
     flex: 1;
     border-radius: 10px;
     overflow: hidden;
-}
-
-/* Left Section Styles */
-main .left {
+  }
+  
+  /* Left Section Styles */
+  main .left {
     background-color: #000000;
     position: relative;
     display: flex;
     flex-direction: column;
     padding: 1rem;
-}
-
-/* Code Editor */
-.code {
+  }
+  
+  /* reviewButton.scrollIntoView({ behavior: "smooth" });
+  <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="review"
+  onClick={CodeReview}
+>
+  Review
+</motion.button> */
+  /* Code Editor */
+  .code {
     flex: 1;
     width: 100%;
     padding: 4px;
-}
-
-/* Review Button */
-main .left .review {
+  }
+  
+  /* Review Button */
+  main .left .review {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
@@ -58,52 +69,230 @@ main .left .review {
     user-select: none;
     cursor: pointer;
     border: none;
-}
-
-/* Right Section */
-main .right {
+  }
+  
+  /* Right Section */
+  main .right {
     background-color: #322727;
     color: white;
     padding: 20px 24px;
     display: flex;
     flex-direction: column;
-}
-.copy-button{
+  }
+  
+  .copy-button {
     width: 30px;
     height: 30px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 1024px) {
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
     main {
-        flex-direction: column;
-        padding: 1rem;
+      flex-direction: column;
+      padding: 1rem;
     }
-
-    main .left, 
-    main .right {
-        width: 100%;
-        min-height: 50vh; /* Corrected typo here */
-    }
-}
-
-/* Mobile Devices */
-@media screen and (min-width: 322px) and (max-width: 1000px) {
-    main {
-        flex-direction: column;
-        width: 100%;
-        padding: 1rem;
-    }
-
+  
     main .left,
     main .right {
-        width: 100%;
-        min-height: auto;
-        overflow: auto;
+      width: 100%;
+      min-height: 50vh;
     }
-
+  }
+  
+  /* Mobile Devices */
+  @media screen and (min-width: 322px) and (max-width: 1000px) {
+    main {
+      flex-direction: column;
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    main .left,
+    main .right {
+      width: 100%;
+      min-height: auto;
+      overflow: auto;
+    }
+  
     main .left .review {
-        bottom: 0.5rem;
-        right: 0.5rem;
+      bottom: 0.5rem;
+      right: 0.5rem;
     }
-}
+  }
+  
+  /* In your App.css */
+  
+  /* ... (Your existing CSS) ... */
+  
+  main .right {
+    background-color: #322727;
+    color: white;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* Added overflow for scrollable content */
+  }
+  
+  main .right p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #e0e0e0; /* light gray for better readability on dark background */
+  }
+  
+  main .right h1,
+  main .right h2,
+  main .right h3,
+  main .right h4,
+  main .right h5,
+  main .right h6 {
+    color: #cce2ff; /* Light blue for headings */
+    margin-bottom: 10px;
+  }
+  
+  main .right ul,
+  main .right ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  main .right li {
+    margin-bottom: 5px;
+    color: #e0e0e0;
+  }
+  
+  main .right code {
+    background-color: #4a4a4a;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+    color: #f0f0f0;
+  }
+  
+  main .right pre {
+    background-color: #4a4a4a;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: monospace;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+  }
+  
+  /* In your App.css */
+  
+  /* ... (Your existing CSS) ... */
+  
+  main .right {
+    background-color: #322727;
+    color: white;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* Added overflow for scrollable content */
+  }
+  
+  main .right p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #e0e0e0; /* light gray for better readability on dark background */
+  }
+  
+  main .right h1,
+  main .right h2,
+  main .right h3,
+  main .right h4,
+  main .right h5,
+  main .right h6 {
+    color: #cce2ff; /* Light blue for headings */
+    margin-bottom: 10px;
+  }
+  
+  main .right ul,
+  main .right ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  main .right li {
+    margin-bottom: 5px;
+    color: #e0e0e0;
+  }
+  
+  main .right code {
+    background-color: #4a4a4a;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+    color: #f0f0f0;
+  }
+  
+  main .right pre {
+    background-color: #4a4a4a;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: monospace;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+  }
+  /* In your App.css */
+  
+  /* ... (Your existing CSS) ... */
+  
+  main .right {
+    background-color: #322727;
+    color: white;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* Added overflow for scrollable content */
+  }
+  
+  main .right p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #e0e0e0; /* light gray for better readability on dark background */
+  }
+  
+  main .right h1,
+  main .right h2,
+  main .right h3,
+  main .right h4,
+  main .right h5,
+  main .right h6 {
+    color: #cce2ff; /* Light blue for headings */
+    margin-bottom: 10px;
+  }
+  
+  main .right ul,
+  main .right ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  main .right li {
+    margin-bottom: 5px;
+    color: #e0e0e0;
+  }
+  
+  main .right code {
+    background-color: #4a4a4a;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+    color: #f0f0f0;
+  }
+  
+  main .right pre {
+    background-color: #4a4a4a;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: monospace;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+  }
+  
