@@ -209,7 +209,7 @@ const CodePreview = () => {
             overflowX: "auto"
           }}>
             {loading ? (
-              <div style={{ textAlign: "center", padding: "30px" }}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "30px" }}>
                 <img
                   src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/585d0331234507.564a1d239ac5e.gif"
                   alt="Loading..."
